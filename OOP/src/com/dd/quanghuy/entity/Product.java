@@ -12,16 +12,18 @@ package com.dd.quanghuy.entity;
 public class Product {
     int id;
     String name;
-    String categoryName;
     int quality;
     int categoryID;
 
-    public Product(int id, String name, String categoryName, int quality, int categoryID) {
+    public Product(int id, String name, int quality, int categoryID) {
         this.id = id;
         this.name = name;
-        this.categoryName = categoryName;
         this.quality = quality;
         this.categoryID = categoryID;
+    }
+
+    public Product() {
+      
     }
 
     public int getId() {
@@ -40,14 +42,6 @@ public class Product {
         this.name = name;
     }
 
-    public String getCategoryName() {
-        return categoryName;
-    }
-
-    public void setCategoryName(String categoryName) {
-        this.categoryName = categoryName;
-    }
-
     public int getQuality() {
         return quality;
     }
@@ -62,6 +56,10 @@ public class Product {
 
     public void setCategoryID(int categoryID) {
         this.categoryID = categoryID;
+    }
+
+    public Object getId(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
