@@ -6,7 +6,10 @@
 package oop;
 
 import DatabaseDao.Database;
+import com.dd.quanghuy.demo.AccsessoryDaoDemo;
+import com.dd.quanghuy.demo.CategoryDaoDemo;
 import com.dd.quanghuy.demo.DatabaseDemo;
+import com.dd.quanghuy.demo.ProductDaoDemo;
 import com.dd.quanghuy.entity.Accsessory;
 import com.dd.quanghuy.entity.Category;
 import com.dd.quanghuy.entity.Product;
@@ -21,6 +24,30 @@ public class OOP {
     public static void main(String[] args) {
         Database a = new Database();
         DatabaseDemo databasedemo = new DatabaseDemo();
+        CategoryDaoDemo categoryDaoDemo = new CategoryDaoDemo();
+        Category b = new Category(1, "Nang kieu lo buoc", "HKT");
+        categoryDaoDemo.insertTest(b);
+        Category c = new Category(1, "Nang kieu lo buoc", "HKT-M");
+        categoryDaoDemo.updateTest(c);
+        categoryDaoDemo.deleteTest(c);
+        categoryDaoDemo.printTest();
+        
+        ProductDaoDemo productDaoDemo = new ProductDaoDemo();
+        Product productdb = new Product(1, "Nang kieu lo buoc", 1, 1);
+        productDaoDemo.insertTest(productdb);
+        Product productdb2 = new Product(1, "Nang kieu lo222 buoc", 1, 1);
+        productDaoDemo.updateTest(productdb2);
+        productDaoDemo.deleteTest(productdb2);
+        productDaoDemo.printTest();
+        
+        AccsessoryDaoDemo accsessoryDaoDemo = new AccsessoryDaoDemo();
+        Accsessory accsessorydb = new Accsessory(1, "Nang kieu lo buoc");
+        accsessoryDaoDemo.insertTest(accsessorydb);
+        Accsessory accsessorydb2 = new Accsessory(1, "Nang kieu lo222 buoc");
+        accsessoryDaoDemo.updateTest(accsessorydb2);
+        accsessoryDaoDemo.deleteTest(accsessorydb2);
+        accsessoryDaoDemo.printTest();
+
         // insert product
         Product product = new Product(1, "CPU", 3, 4);
         databasedemo.insertTableTest("product", product);
@@ -80,14 +107,10 @@ public class OOP {
         for (int i = 0; i < a.accessoryTable.size(); i++) {
             System.out.println("accsessory : accsessoryID - " + a.accessoryTable.get(i).getId() + "   accsessoryName - " + a.accessoryTable.get(i).getName());
         }
-          System.out.println("----------------------------------------------------------------------------------");
-       
-       
+        System.out.println("----------------------------------------------------------------------------------");
         databasedemo.truncateTable("accessory");
         databasedemo.truncateTable("product");
         databasedemo.truncateTable("category");
-       databasedemo.printTable();
-              
-        
+        databasedemo.printTable();
     }
 }

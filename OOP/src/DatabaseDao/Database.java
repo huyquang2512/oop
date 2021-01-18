@@ -20,11 +20,12 @@ public class Database {
     public static List<Category> categoryTable = new ArrayList<Category>();
     public static List<Accsessory> accessoryTable = new ArrayList<Accsessory>();
     public Database instants;
-
+    
+    
     final String productName = "product";
     final String categoryName = "category";
     final String accessoryName = "accessory";
-
+    
     public int insertTable(String name, Object row) {
         int checkAction = 0;
         if (name == productName) {
@@ -128,9 +129,5 @@ public class Database {
         if (name == accessoryName) {
             categoryTable.clear();
         }
-    }
-
-    public void updateTable(int id, Object row) {
-
     }
 }
