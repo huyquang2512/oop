@@ -8,4 +8,4 @@ Bài 13 :
 Bài 15
 - Đều có các thuộc tính chung để nhận biết các tên để truy cập của : Product, Category và Assessory
 - Các function chung bao gồm insert, update, delete.
-- 
+- ưu điểm: Tái sử dụng lại các hàm Insert, Update, Delete
