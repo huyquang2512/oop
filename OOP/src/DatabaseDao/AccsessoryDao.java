@@ -11,33 +11,21 @@ import com.dd.quanghuy.entity.Accsessory;
  *
  * @author Ad
  */
-public class AccsessoryDao {
+public class AccsessoryDao extends BaseDao{
 
-    final String Accsessory = "accsessory";
-    Database db = new Database();
-
-    public boolean insert(Object row) {
-        if (db.insertTable(Accsessory, row) == 1) {
-            return true;
-        }
-
-        return false;
+    @Override
+    public boolean insert1(Object row) {
+        return super.insert1(row);
     }
 
+    @Override
     public boolean update(Object row) {
-        if (db.updateTable(Accsessory, row) == 1) {
-            return true;
-        }
-
-        return false;
+        return super.update(row);
     }
 
+    @Override
     public boolean delete(Object row) {
-        if (db.deleteTable(Accsessory, row) == true) {
-            return true;
-        }
-
-        return false;
+        return super.delete(row);
     }
 
     public void print() {

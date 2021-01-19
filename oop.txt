@@ -1,0 +1,11 @@
+Bài 13 :
+- Các entity có các điểm chung là : + int id;
+				    + String name;
+- Abstract class trong trường hợp này là dùng cho lớp cha baseRow
+- Điểm lợi ở đây là các entity : Product, Category và Assessory có thể sử dụng lớp cha baseRow
+- Tránh trường hợp gọi nhầm lớp baseRow
+- Tối ưu code, ngắn gọn 
+Bài 15
+- Đều có các thuộc tính chung để nhận biết các tên để truy cập của : Product, Category và Assessory
+- Các function chung bao gồm insert, update, delete.
+- 

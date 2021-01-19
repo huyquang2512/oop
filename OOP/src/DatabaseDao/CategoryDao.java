@@ -12,38 +12,26 @@ import DatabaseDao.Database;
  *
  * @author Ad
  */
-public class CategoryDao {
+public class CategoryDao extends BaseDao {
 
-    final String Category = "category";
-    Database db = new Database();
-
-    public boolean insert(Object row) {
-        if (db.insertTable(Category, row) == 1) {
-            return true;
-        }
-
-        return false;
+    @Override
+    public boolean insert1(Object row) {
+        return super.insert1(row);
     }
 
+    @Override
     public boolean update(Object row) {
-        if (db.updateTable(Category, row) == 1) {
-            return true;
-        }
-
-        return false;
+        return super.update(row);
     }
 
+    @Override
     public boolean delete(Object row) {
-        if (db.deleteTable(Category, row) == true) {
-            return true;
-        }
-
-        return false;
+        return super.delete(row);
     }
-    
-    public void print(){
+
+    public void print() {
         for (Category category : Database.categoryTable) {
-            System.out.println(category.getId() + "    " +category.getName()+ "    "+ category.getDescription());
+            System.out.println(category.getId() + "    " + category.getName() + "    " + category.getDescription());
         }
     }
 }

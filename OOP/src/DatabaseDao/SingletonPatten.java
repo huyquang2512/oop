@@ -9,6 +9,6 @@ package DatabaseDao;
  *
  * @author Ad
  */
-class pr {
+public class SingletonPatten {
     
 }

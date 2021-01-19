@@ -9,9 +9,7 @@ package com.dd.quanghuy.entity;
  *
  * @author Ad
  */
-public class Product {
-    int id;
-    String name;
+public class Product extends baseRow{
     int quality;
     int categoryID;
 
@@ -24,22 +22,6 @@ public class Product {
 
     public Product() {
       
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public int getQuality() {
@@ -57,9 +39,4 @@ public class Product {
     public void setCategoryID(int categoryID) {
         this.categoryID = categoryID;
     }
-
-    public Object getId(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
 }

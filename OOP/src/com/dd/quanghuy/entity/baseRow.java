@@ -9,10 +9,23 @@ package com.dd.quanghuy.entity;
  *
  * @author Ad
  */
-public class Accsessory extends baseRow{
+public abstract class baseRow {
+    int id;
+    String name;
 
-    public Accsessory(int id, String name) {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
         this.name = name;
     }
 }
