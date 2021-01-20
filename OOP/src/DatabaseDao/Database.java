@@ -14,17 +14,17 @@ import java.util.List;
  *
  * @author Ad
  */
-public class Database {
+public abstract class Database {
 
     final String PRODUCT_NAME = "product";
     final String CATEGORY_NAME = "category";
     final String ACCSESSORY_NAME = "accessory";
 
-    public static List<Product> productTable = new ArrayList<Product>();
-    public static List<Category> categoryTable = new ArrayList<Category>();
-    public static List<Accsessory> accessoryTable = new ArrayList<Accsessory>();
+    protected static List<Product> productTable = new ArrayList<Product>();
+    protected static List<Category> categoryTable = new ArrayList<Category>();
+    protected static List<Accsessory> accessoryTable = new ArrayList<Accsessory>();
     public Database instants;
-
+    
     public int insertTable(String name, Object row) {
         int checkAction = 0;
         if (name == PRODUCT_NAME) {

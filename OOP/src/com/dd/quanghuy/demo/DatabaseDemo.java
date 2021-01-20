@@ -10,35 +10,33 @@ import com.dd.quanghuy.entity.Accsessory;
 import com.dd.quanghuy.entity.Category;
 import com.dd.quanghuy.entity.Product;
 
-public class DatabaseDemo {
-
-    Database database = new Database();
+public class DatabaseDemo extends Database{
 
     public void insertTableTest(String name, Object row) {
-        database.insertTable(name, row);
+        instants.insertTable(name, row);
     }
 
     public void updateTableTest(String name, Object row) {
-        database.updateTable(name, row);
+        instants.updateTable(name, row);
     }
 
     public void deleteTableTest(String name, Object row) {
-        database.deleteTable(name, row);
+        instants.deleteTable(name, row);
     }
 
     public void truncateTable(String name) {
-        database.truncateTable(name);
+        instants.truncateTable(name);
 
     }
 
     public void printTable() {
-        for (Product product : database.productTable) {
+        for (Product product : instants.productTable) {
             System.out.println(product.getName());
         }
-        for (Category category : database.categoryTable) {
+        for (Category category : instants.categoryTable) {
             System.out.println(category.getName());
         }
-        for (Accsessory accsessory : database.accessoryTable) {
+        for (Accsessory accsessory : instants.accessoryTable) {
             System.out.println(accsessory.getName());
         }
     }

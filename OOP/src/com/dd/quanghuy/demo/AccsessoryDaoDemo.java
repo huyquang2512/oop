@@ -16,7 +16,7 @@ public class AccsessoryDaoDemo {
     AccsessoryDao accsessory = new AccsessoryDao();
     
     public void insertTest(Object row) {
-        accsessory.insert1(row);
+        accsessory.insert(row);
     }
 
     public void updateTest(Object row) {

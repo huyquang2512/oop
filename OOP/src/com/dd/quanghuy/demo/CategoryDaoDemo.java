@@ -18,7 +18,7 @@ public class CategoryDaoDemo {
     CategoryDao categoryDao = new CategoryDao();
     
     public void insertTest(Object row) {
-        categoryDao.insert1(row);
+        categoryDao.insert(row);
     }
 
     public void updateTest(Object row) {

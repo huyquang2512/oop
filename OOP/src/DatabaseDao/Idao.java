@@ -9,6 +9,11 @@ package DatabaseDao;
  *
  * @author Ad
  */
-public class SingletonPatten {
-    
+public interface Idao {
+
+    public boolean insert(Object row);
+
+    public boolean update(Object row);
+
+    public boolean delete(Object row);
 }

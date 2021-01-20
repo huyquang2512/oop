@@ -15,8 +15,8 @@ import com.dd.quanghuy.entity.Product;
 public class ProductDao extends BaseDao{
 
    @Override
-    public boolean insert1(Object row) {
-        return super.insert1(row);
+    public boolean insert(Object row) {
+        return super.insert(row);
     }
 
     @Override

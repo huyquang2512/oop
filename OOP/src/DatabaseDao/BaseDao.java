@@ -11,31 +11,33 @@ import com.dd.quanghuy.entity.Accsessory;
  *
  * @author Ad
  */
-public abstract class BaseDao {
-
+public abstract class BaseDao extends Database implements Idao{
     final String CATEGORY = "category";
     final String PRODUCT = "product";
     final String ACCSESSORY = "accsessory";
-    Database db = new Database();
+    
 
-    public boolean insert1(Object row) {
-        if (db.insertTable(ACCSESSORY, row) == 1) {
+    @Override
+    public boolean insert(Object row) {
+        if (instants.insertTable(ACCSESSORY, row) == 1) {
             return true;
         }
 
         return false;
     }
 
+    @Override
     public boolean update(Object row) {
-        if (db.updateTable(ACCSESSORY, row) == 1) {
+        if (instants.updateTable(ACCSESSORY, row) == 1) {
             return true;
         }
 
         return false;
     }
 
+    @Override
     public boolean delete(Object row) {
-        if (db.deleteTable(ACCSESSORY, row) == true) {
+        if (instants.deleteTable(ACCSESSORY, row) == true) {
             return true;
         }
 

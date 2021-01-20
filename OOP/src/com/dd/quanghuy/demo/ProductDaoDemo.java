@@ -19,7 +19,7 @@ public class ProductDaoDemo {
     ProductDao productDao = new ProductDao();
 
     public void insertTest(Object row) {
-        productDao.insert1(row);
+        productDao.insert(row);
     }
 
     public void updateTest(Object row) {
